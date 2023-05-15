@@ -4,12 +4,11 @@ let messages = [];
 const rooms = []
 const users = new Map();
 
-// Dummy vote variables for testing purposes only
-var counterA = 0, counterB = 0;
+let counterA = 0, counterB = 0;
 
 const defaultUser = {
   id: 'anon',
-  name: 'Anonymous',
+  name: 'Player',
 };
 
 const messageExpirationTimeMS = 5 * 60 * 1000;
