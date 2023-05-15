@@ -1,6 +1,5 @@
 const port = 3030;
 
-
 const socket = require('./socket.js');
 const io = require('socket.io')(port, {
   cors: {
@@ -12,6 +11,7 @@ console.log('> Server listening on port:', port);
 socket(io)
 const game = createGame();
 let maxConcurrentConnections = 15;
+let fruitGameInterval = 2000;
 
 io.on('connection', socket => {
   console.log(socket.id);
@@ -103,7 +103,6 @@ io.on('connection', socket => {
 // create game 
 function createGame() {
   console.log('> Starting new game')
-  let fruitGameInterval
 
   const game = {
     canvasWidth: 40,
